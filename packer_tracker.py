@@ -1,14 +1,19 @@
 #!/usr/bin/env python3
 
 # Packers Stats Tracker
+# Going back to basics to review Python fundamentals in a fun way
 
 # Variables
 packers_scores = []
 opponent_scores = []
+opposing_team = []
 
 # Input game results
-print("Enter the scores for each game (Packers first, then opponents). Type 'done' to finish.")
+print("Enter the opposing team and scores for each game (Packers first, then opponents). Type 'done' to finish.")
 while True:
+    opponent = input("Opposing team: ")
+    if opponent.lower() == "done":
+        break
     packers = input("Packers score: ")
     if packers.lower() == "done":
         break
@@ -17,6 +22,7 @@ while True:
         break
 
     # Add scores to lists
+    opposing_team.append(str(opponent))
     packers_scores.append(int(packers))
     opponent_scores.append(int(opponents))
 
